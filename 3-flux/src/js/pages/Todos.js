@@ -1,24 +1,13 @@
 import React from "react";
 import Todo from "../components/Todo";
-
+import TodoStore from "../stores/TodoStore";
 
 export default class Featured extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      todos: [
-        {
-          id: 1134654812,
-          text: 'Go Shopping',
-          complete: false
-        },
-        {
-          id: 1134655112,
-          text: 'Pay Bills',
-          complete: false
-        }
-      ]
+      todos: TodoStore.getAll()
     };
   }
 
